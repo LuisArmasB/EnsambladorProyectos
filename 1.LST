@@ -1,0 +1,65 @@
+Microsoft (R) Macro Assembler Version 5.00                  1/11/22 22:38:28
+                                                             Page     1-1
+
+
+
+potencia.asm(16): warning A4085: End of file, no END directive
+Microsoft (R) Macro Assembler Version 5.00                  1/11/22 22:38:28
+                                                             Page     1-1
+
+
+       1				name "potencia" ;8 chars DOS 
+potencia.asm(1): error A2105: Expected: module name
+       2 0100				org 100h ;counter to 100h 
+       3 0100  8B 0E 0115		mov cx, num2  
+potencia.asm(3): error A2086: Data emitted with no segment
+       4 0104  A1 0113			mov ax, num1 
+potencia.asm(4): error A2086: Data emitted with no segment
+       5 0107				inicio: 
+potencia.asm(5): error A2062: Missing or unreachable CS
+       6 0107  8B 1E 0113		 mov bx,num1 
+potencia.asm(6): error A2086: Data emitted with no segment
+       7 010B  F7 E3			 mul bx ;ax = ax * bx 
+potencia.asm(7): error A2086: Data emitted with no segment
+       8 010D  E2 F8			 loop inicio ;c-- 
+potencia.asm(8): error A2086: Data emitted with no segment
+       9				 
+      10 010F  A3 0117			mov num3,ax ;copiamos el resultado 
+potencia.asm(10): error A2086: Data emitted with no segment
+      11 0112  C3			ret 
+potencia.asm(11): error A2086: Data emitted with no segment
+      12				;Variables "db" para byte y "dw" para w
+					ord 
+      13 0113  000A			num1 dw 0Ah 
+potencia.asm(13): error A2086: Data emitted with no segment
+      14 0115  0003			num2 dw 03h 
+potencia.asm(14): error A2086: Data emitted with no segment
+      15 0117  0000			num3 dw 0h 
+potencia.asm(15): error A2086: Data emitted with no segment
+      16				 
+potencia.asm(16): warning A4085: End of file, no END directive
+Microsoft (R) Macro Assembler Version 5.00                  1/11/22 22:38:28
+                                                             Symbols-1
+
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+INICIO . . . . . . . . . . . . .  	L NEAR	0107	
+
+NUM1 . . . . . . . . . . . . . .  	L WORD	0113	
+NUM2 . . . . . . . . . . . . . .  	L WORD	0115	
+NUM3 . . . . . . . . . . . . . .  	L WORD	0117	
+
+@FILENAME  . . . . . . . . . . .  	TEXT  potencia		
+
+
+     15 Source  Lines
+     16 Total   Lines
+      5 Symbols
+
+  50728 + 465816 Bytes symbol space free
+
+      1 Warning Errors
+     13 Severe  Errors
